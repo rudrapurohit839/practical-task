@@ -1,18 +1,25 @@
 ✅ Single endpoint /api/webhook to receive all incoming webhooks
-
 🧠 Source detection via headers or payload fields (GitHub, Stripe, Custom)
-
 🗃 Database storage for each source:
 
 GitHub → Store commit details (e.g., commit ID, message, author)
-
 Stripe → Store payment transaction details (e.g., amount, status, currency)
-
 Custom → Store the full JSON payload
 
 ✅ Error handling: Logs issues during processing for easier debugging
-
 🧪 Automated tests for webhook functionality
+
+---
+
+## ⚙️ Tech Stack
+
+- **PHP** (Laravel)
+- **MySQL**
+- **Composer**
+- **PHPUnit** for testing
+- **ngrok** (for live webhook testing, optional)
+
+---
 
 🧪 How to Test
 Option 1: Run Laravel's Automated Tests
@@ -58,3 +65,5 @@ curl -X POST http://127.0.0.1:8000/api/webhook \
       "info": "Sample custom payload"
     }
   }'
+
+
